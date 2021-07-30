@@ -1,0 +1,39 @@
+﻿Linq key points :
+
+ LINQ has a 3-layered architecture in which the uppermost
+ layer consists of the language extensions and the bottom layer
+ consists of data sources that are typically 
+ objects implementing IEnumerable <T> or IQueryable <T> generic interfaces. 
+
+ A set of extension methods forming a query pattern is known as LINQ Standard Query Operators.
+
+ LINQ standard query operators can be categorized into the following ones on the basis of their functionality.
+
+	Filtering Operators
+	Join Operators
+	Projection Operations
+	Sorting Operators
+	Grouping Operators
+	Conversions
+	Concatenation
+	Aggregation
+	Quantifier Operations
+	Partition Operations
+	Generation Operations
+	Set Operations
+	Equality
+	Element Operators
+
+
+-- traditional connection logic --
+
+SqlConnection sqlConnection = new SqlConnection(connectString);
+SqlConnection.Open();
+
+System.Data.SqlClient.SqlCommand sqlCommand = new SqlCommand();
+sqlCommand.Connection = sqlConnection;
+
+sqlCommand.CommandText = "Select * from Customer";
+return sqlCommand.ExecuteReader(CommandBehavior.CloseConnection)
+
+
